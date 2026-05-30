@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walteir Junior — IA & Data Science</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav" id="navbar">
+        <div class="nav-inner">
+            <span class="nav-logo">WJ<span class="accent">.</span></span>
+            <ul class="nav-links">
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#academico">Formação</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato" class="nav-cta">Contato</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+            <div class="hero-orb orb-1"></div>
+            <div class="hero-orb orb-2"></div>
+        </div>
+        <div class="hero-inner">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Disponível para oportunidades
+                </div>
+                <h1>
+                    <span class="hero-name">Walteir</span>
+                    <span class="hero-name accent-line">Junior</span>
+                </h1>
+                <p class="hero-role">
+                    <span class="mono">&lt;</span>
+                    Estudante de IA · Ciência de Dados · Machine Learning
+                    <span class="mono">/&gt;</span>
+                </p>
+                <p class="hero-bio">
+                    Construindo soluções inteligentes com Python, dados e aprendizado de máquina. 
+                    Apaixonado por transformar dados em insights reais.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projetos" class="btn-primary">Ver Projetos</a>
+                    <a href="#contato" class="btn-ghost">Entre em Contato</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/wjr007" target="_blank" aria-label="GitHub" class="social-btn">
+                        <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/walteir-luiz-de-morais-junior-42a21928a/" target="_blank" aria-label="LinkedIn" class="social-btn">
+                        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="photo-frame">
+                    <div class="photo-ring"></div>
+                    <img src="foto.png" alt="Walteir Junior" class="photo">
+                    <div class="photo-badge-float">
+                        <span class="mono">AI</span>
+                    </div>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-num">15+</span>
+                        <span class="stat-label">Disciplinas</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">3</span>
+                        <span class="stat-label">Projetos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">∞</span>
+                        <span class="stat-label">Curiosidade</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <span>scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="sobre" id="sobre">
+        <div class="container">
+            <div class="section-label mono">// 01. sobre</div>
+            <div class="sobre-grid">
+                <div class="sobre-text">
+                    <h2>Olá, eu sou<br><span class="accent">Walteir Junior</span></h2>
+                    <p>
+                        Estudante de Inteligência Artificial com foco em ciência de dados, machine learning e 
+                        desenvolvimento de soluções práticas. Estou cursando disciplinas avançadas como 
+                        Python aplicado à IA, Cloud Computing e Análise de Dados.
+                    </p>
+                    <p>
+                        Meu objetivo é construir sistemas inteligentes que gerem valor real, unindo 
+                        fundamentos matemáticos sólidos com código eficiente e boas práticas de engenharia.
+                    </p>
+                    <a href="#contato" class="btn-primary">Vamos conversar →</a>
+                </div>
+                <div class="sobre-cards">
+                    <div class="info-card">
+                        <div class="info-icon">🎓</div>
+                        <div>
+                            <strong>Formação</strong>
+                            <span>Inteligência Artificial</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <strong>Localização</strong>
+                            <span>Brasil</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">💻</div>
+                        <div>
+                            <strong>Foco atual</strong>
+                            <span>Python · ML · Data Science</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🚀</div>
+                        <div>
+                            <strong>Próximo passo</strong>
+                            <span>Deep Learning · Big Data</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <div class="section-label mono">// 02. habilidades</div>
+            <h2 class="section-title">Stack & Tecnologias</h2>
+            <div class="skills-grid">
+
+                <div class="skill-category">
+                    <h3 class="skill-cat-title"><span class="accent mono">&gt;</span> Linguagens</h3>
+                    <div class="skill-pills">
+                        <span class="pill pill-main">Python</span>
+                        <span class="pill">JavaScript</span>
+                        <span class="pill">HTML/CSS</span>
+                        <span class="pill">SQL</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-cat-title"><span class="accent mono">&gt;</span> IA & Dados</h3>
+                    <div class="skill-pills">
+                        <span class="pill pill-main">Scikit-Learn</span>
+                        <span class="pill">Pandas</span>
+                        <span class="pill">NumPy</span>
+                        <span class="pill">Matplotlib</span>
+                        <span class="pill">Flask</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-cat-title"><span class="accent mono">&gt;</span> Ferramentas</h3>
+                    <div class="skill-pills">
+                        <span class="pill pill-main">Git / GitHub</span>
+                        <span class="pill">Figma</span>
+                        <span class="pill">VS Code</span>
+                        <span class="pill">Cloud</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-cat-title"><span class="accent mono">&gt;</span> Conceitos</h3>
+                    <div class="skill-pills">
+                        <span class="pill pill-main">Machine Learning</span>
+                        <span class="pill">Banco de Dados</span>
+                        <span class="pill">POO</span>
+                        <span class="pill">Estrutura de Dados</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMAÇÃO ACADÊMICA -->
+    <section class="academico" id="academico">
+        <div class="container">
+            <div class="section-label mono">// 03. formação</div>
+            <h2 class="section-title">Perfil Acadêmico</h2>
+
+            <div class="tab-bar">
+                <button class="tab active" data-tab="concluidas">✅ Concluídas <span class="tab-count">15</span></button>
+                <button class="tab" data-tab="cursando">⏳ Cursando <span class="tab-count">6</span></button>
+                <button class="tab" data-tab="futuras">🔜 Em breve <span class="tab-count">9</span></button>
+            </div>
+
+            <div class="tab-panel active" id="tab-concluidas">
+                <div class="disciplines-grid">
+                    <div class="discipline">Álgebra Linear e Geometria Analítica</div>
+                    <div class="discipline">Algoritmos e Estruturas de Dados</div>
+                    <div class="discipline">Arquitetura e Organização de Computadores</div>
+                    <div class="discipline">Banco de Dados I</div>
+                    <div class="discipline">Comportamento Empreendedor</div>
+                    <div class="discipline">Estatística Aplicada</div>
+                    <div class="discipline">Fundamentos de Administração e Economia</div>
+                    <div class="discipline">Fundamentos de Tecnologia da Informação</div>
+                    <div class="discipline">Gestão de Projetos</div>
+                    <div class="discipline">Interface Homem-Máquina</div>
+                    <div class="discipline">Laboratório de Programação</div>
+                    <div class="discipline">Linguagem e Técnicas de Programação</div>
+                    <div class="discipline">Matemática Aplicada à IA</div>
+                    <div class="discipline">Segurança e Auditoria de Sistemas</div>
+                    <div class="discipline">Tecnologias Digitais Emergentes</div>
+                </div>
+            </div>
+
+            <div class="tab-panel" id="tab-cursando">
+                <div class="disciplines-grid">
+                    <div class="discipline in-progress">Análise de Dados</div>
+                    <div class="discipline in-progress">Banco de Dados II</div>
+                    <div class="discipline in-progress">Cidadania: Heterogeneidade e Diversidade</div>
+                    <div class="discipline in-progress">Cloud Computing</div>
+                    <div class="discipline in-progress">Programação Orientada a Objetos</div>
+                    <div class="discipline in-progress">Python Aplicado à IA</div>
+                </div>
+            </div>
+
+            <div class="tab-panel" id="tab-futuras">
+                <div class="disciplines-grid">
+                    <div class="discipline future">Big Data, Analytics e Data Mining</div>
+                    <div class="discipline future">Ciência de Dados</div>
+                    <div class="discipline future">Deep Learning</div>
+                    <div class="discipline future">Direito Digital</div>
+                    <div class="discipline future">Educação Financeira</div>
+                    <div class="discipline future">Estrutura de Dados I & II</div>
+                    <div class="discipline future">Machine Learning</div>
+                    <div class="discipline future">Projetos Integrados I & II</div>
+                    <div class="discipline future">Indústria 4.0</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section class="projetos" id="projetos">
+        <div class="container">
+            <div class="section-label mono">// 04. projetos</div>
+            <h2 class="section-title">Projetos em Destaque</h2>
+            <div class="projects-grid">
+
+                <div class="project-card featured">
+                    <div class="project-top">
+                        <div class="project-number mono">01</div>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Scikit-Learn</span>
+                            <span>Flask</span>
+                        </div>
+                    </div>
+                    <h3>Machine Learning Model</h3>
+                    <p>Modelo de aprendizado de máquina para classificação e predição de dados. Pipeline completo com pré-processamento, treinamento e API de inferência.</p>
+                    <div class="project-footer">
+                        <a href="https://github.com/wjr007" target="_blank" class="project-link">Ver no GitHub →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-top">
+                        <div class="project-number mono">02</div>
+                        <div class="project-tags">
+                            <span>Pandas</span>
+                            <span>NumPy</span>
+                            <span>Matplotlib</span>
+                        </div>
+                    </div>
+                    <h3>Data Science Analysis</h3>
+                    <p>Análise exploratória de dados com visualizações avançadas, limpeza de datasets e extração de insights acionáveis para tomada de decisão.</p>
+                    <div class="project-footer">
+                        <a href="https://github.com/wjr007" target="_blank" class="project-link">Ver no GitHub →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-top">
+                        <div class="project-number mono">03</div>
+                        <div class="project-tags">
+                            <span>HTML/CSS</span>
+                            <span>React</span>
+                            <span>Figma</span>
+                        </div>
+                    </div>
+                    <h3>UI · UX Design System</h3>
+                    <p>Interface moderna com foco em experiência do usuário. Design responsivo, acessível e com componentes reutilizáveis alinhados ao conceito de IA.</p>
+                    <div class="project-footer">
+                        <a href="https://github.com/wjr007" target="_blank" class="project-link">Ver no GitHub →</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contato" id="contato">
+        <div class="container">
+            <div class="section-label mono">// 05. contato</div>
+            <div class="contato-inner">
+                <div class="contato-text">
+                    <h2>Vamos construir<br><span class="accent">algo juntos?</span></h2>
+                    <p>Estou aberto a conversas sobre oportunidades, projetos colaborativos, estágios ou simplesmente trocar ideia sobre IA e tecnologia.</p>
+                    <div class="contato-links">
+                        <a href="https://github.com/wjr007" target="_blank" class="contato-link">
+                            <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                            github.com/wjr007
+                        </a>
+                        <a href="https://www.linkedin.com/in/walteir-luiz-de-morais-junior-42a21928a/" target="_blank" class="contato-link">
+                            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+                <div class="contato-cta">
+                    <div class="cta-box">
+                        <p class="mono cta-status"><span class="badge-dot"></span> Disponível agora</p>
+                        <h3>Mande uma mensagem</h3>
+                        <p>Responderei o mais rápido possível!</p>
+                        <a href="mailto:walteir@email.com" class="btn-primary full-width">Enviar Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <span class="nav-logo">WJ<span class="accent">.</span></span>
+                <p class="mono footer-copy">Construído com 💻 e Python — 2025</p>
+                <div class="footer-links">
+                    <a href="https://github.com/wjr007" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/walteir-luiz-de-morais-junior-42a21928a/" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
