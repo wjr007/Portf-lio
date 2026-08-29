@@ -35,8 +35,8 @@
 html { scroll-behavior: smooth; font-size: 16px; }
 
 body {
+    background: linear-gradient(rgba(5, 10, 14, 0.86), rgba(5, 10, 14, 0.93)), url('background-ia.png') center / cover fixed;
     font-family: var(--font-body);
-    background: var(--bg);
     color: var(--text);
     overflow-x: hidden;
     line-height: 1.7;
@@ -380,8 +380,8 @@ section { padding: 100px 0; }
 
 .photo-frame {
     position: relative;
-    width: 260px;
-    height: 260px;
+    width: 280px;
+    height: 280px;
 }
 
 .photo-ring {
@@ -396,8 +396,8 @@ section { padding: 100px 0; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
 .photo {
-    width: 260px;
-    height: 260px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center top;
@@ -616,13 +616,152 @@ section { padding: 100px 0; }
     color: var(--accent);
 }
 
-/* =====================================================
-   FORMAÇÃO ACADÊMICA
-   ===================================================== */
+/* Formação acadêmica — tabs de disciplinas e progresso da graduação.
+   Documentação: DOCUMENTACAO.md §Formação acadêmica.
+   Tokens: var(--bg-2), var(--surface), var(--border), var(--accent). */
 .academico {
     background: var(--bg-2);
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
+}
+
+.academic-progress {
+    max-width: 680px;
+    margin: 0 0 32px;
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.academic-progress-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.academic-progress-header p {
+    margin: 6px 0 0;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.academic-progress-header strong {
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 1.25rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.university-logo {
+    width: 86px;
+    height: auto;
+    padding: 6px;
+    background: #202833;
+    outline: 1px solid oklch(1 0 0 / 0.1);
+    border-radius: 8px;
+}
+
+.academic-progress-summary {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 10px;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.academic-progress-summary strong {
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 1.25rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.academic-progress-track {
+    height: 10px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.08);
+    border-radius: 999px;
+}
+
+.academic-progress-value {
+    display: block;
+    height: 100%;
+    background: var(--accent);
+    border-radius: inherit;
+}
+
+/* Certificações — cards de formação complementar.
+   Documentação: DOCUMENTACAO.md §Certificações.
+   Tokens: var(--surface), var(--border), var(--accent). */
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.certificate-carousel { overflow: hidden; margin: -28px 0 36px; }
+.certificate-track { display: flex; gap: 18px; width: max-content; animation: certificateScroll 26s linear infinite; }
+.certificate-track:hover { animation-play-state: paused; }
+.certificate-track img { width: 310px; height: 175px; object-fit: cover; border-radius: 12px; outline: 1px solid oklch(1 0 0 / 0.1); }
+@keyframes certificateScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-420px); } }
+
+.certificate-card {
+    display: flex;
+    min-height: 230px;
+    flex-direction: column;
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+}
+
+.certificate-proof {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-top: 14px;
+    object-fit: cover;
+    object-position: center;
+    outline: 1px solid oklch(1 0 0 / 0.1);
+    border-radius: 8px;
+}
+
+.certificate-card.featured {
+    border-color: rgba(0, 200, 150, 0.35);
+    background: linear-gradient(135deg, rgba(0, 200, 150, 0.08), var(--surface));
+}
+
+.certificate-type {
+    color: var(--accent);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+}
+
+.certificate-card h3 {
+    margin: 14px 0 10px;
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    line-height: 1.25;
+}
+
+.certificate-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+.certificate-card footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+    margin-top: auto;
+    padding-top: 18px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
 }
 
 .tab-bar {
@@ -761,11 +900,25 @@ section { padding: 100px 0; }
 }
 
 .project-number {
-    font-size: 2rem;
-    font-weight: 300;
-    color: var(--text-dim);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 52px;
+    height: 52px;
+    padding: 0 10px;
+    background: linear-gradient(135deg, var(--accent-dim), rgba(0,200,150,0.03));
+    border: 1px solid rgba(0,200,150,0.3);
+    border-radius: 12px;
+    color: var(--accent);
+    font-size: 1.35rem;
+    font-weight: 500;
     line-height: 1;
+    text-shadow: 0 0 18px var(--accent-glow);
+    transition-property: transform, background, box-shadow, color;
+    transition-duration: 220ms;
 }
+
+.project-card:hover .project-number { background: var(--accent); color: var(--bg); transform: rotate(-4deg) scale(1.06); box-shadow: 0 0 24px var(--accent-glow); }
 
 .project-tags {
     display: flex;
@@ -801,16 +954,30 @@ section { padding: 100px 0; }
 .project-footer { margin-top: auto; }
 
 .project-link {
-    font-size: 0.875rem;
+    padding: 10px 14px;
+    background: var(--accent-dim);
+    border: 1px solid rgba(0,200,150,0.35);
+    border-radius: 8px;
     color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
     font-weight: 500;
-    transition: var(--transition);
+    transition-property: background, color, transform;
+    transition-duration: 180ms;
     display: inline-flex;
     align-items: center;
-    gap: 4px;
+    gap: 8px;
 }
 
-.project-link:hover { gap: 8px; }
+.project-link::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: currentColor;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.project-link:hover { background: var(--accent); color: var(--bg); transform: translateY(-2px); }
+.project-link:active { transform: scale(0.96); }
 
 /* =====================================================
    CONTATO
@@ -965,6 +1132,7 @@ section { padding: 100px 0; }
     .sobre-grid { grid-template-columns: 1fr; gap: 48px; }
     .skills-grid { grid-template-columns: 1fr; }
     .projects-grid { grid-template-columns: 1fr; }
+    .certificates-grid { grid-template-columns: 1fr; }
     .contato-inner { grid-template-columns: 1fr; gap: 48px; }
 }
 
