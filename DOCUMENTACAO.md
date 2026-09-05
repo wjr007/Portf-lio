@@ -36,3 +36,8 @@ Abra `index.html` em um servidor local. A prévia criada para esta tarefa usa `1
 ## Fundo visual
 
 `background-ia.png` é a imagem de fundo global, aplicada em `style.css` com uma camada escura para manter o contraste do texto.
+
+## Segurança de credenciais
+
+A chave privada exposta foi removida do projeto e do histórico Git. Identifique e substitua qualquer credencial ou certificado associado antes de reutilizar o serviço. Este site estático não depende de chave privada local. Segredos devem permanecer no servidor ou no gerenciador de segredos do provedor; nunca no JavaScript público. Certificados públicos legítimos .crt e .cer são permitidos. Após a reescrita, colaboradores devem fazer um clone novo para evitar reintroduzir o histórico antigo.
+
