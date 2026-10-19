@@ -1,43 +1,56 @@
-# Portfólio
+# Documentação do Portfólio
 
-## Estrutura
+## Estrutura dos Arquivos
 
-- `index.html`: conteúdo, links e cards dos projetos.
-- `style.css`: apresentação visual responsiva.
-- `script.js`: interações da página.
-- `foto.png`: foto de perfil.
+- `index.html`: Estrutura semântica, seções de perfil, formação acadêmica, filtros e cards dos projetos.
+- `style.css`: Sistema de design visual de alto nível com tema HUD / Cyberpunk, responsividade e micro-interações.
+- `script.js`: Lógica do menu móvel, abas acadêmicas, filtro de projetos por categoria e efeito de digitação.
+- `README.md`: Apresentação oficial do portfólio para o GitHub com banner, métricas e competências de mercado.
+- `portfolio-banner.jpg`: Banner de alta resolução para o README destacando IA, Deep Learning e Engenharia de Dados.
+- `foto.png`: Foto de perfil de Walteir Junior.
+- `uniube-logo.png`: Logotipo da Universidade de Uberaba utilizado na seção acadêmica.
+- `certificado-*.png`: Imagens de comprovação das certificações (Databricks, Power BI, Agentes IA, Expert Ads e Photoshop).
 
-## Atualização de projetos
+---
 
-Os cards em destaque representam somente repositórios públicos da conta `wjr007`. Para atualizar o portfólio, altere os títulos, descrições, tecnologias e URLs na seção `#projetos` de `index.html`.
+## Formação Acadêmica (Histórico Oficial Uniube)
 
-Não inclua dados de repositórios privados, chaves, certificados ou arquivos `.pem` na página ou no repositório público.
+A seção `#academico` reflete com fidelidade o histórico escolar emitido em 18/10/2026:
+- **Curso:** 141 - Inteligência Artificial e Ciência de Dados (Uniube)
+- **Status:** Matriculado no 4º Semestre (Reta final de conclusão em 2026)
+- **Disciplinas Aprovadas (21):**
+  - *2025/1 (8 disciplinas):* Álgebra Linear e Geometria Analítica, Algoritmos e Estruturas de Dados, Arquitetura e Organização de Computadores, Comportamento Empreendedor, Estatística Aplicada, Fundamentos de Tecnologia da Informação, Interface Homem-Máquina, Tecnologias Digitais Emergentes.
+  - *2025/2 (7 disciplinas):* Banco de Dados I, Fundamentos de Administração e Economia, Gestão de Projetos, Laboratório de Programação, Linguagem e Técnicas de Programação, Matemática Aplicada à IA, Segurança e Auditoria de Sistemas de Informação.
+  - *2026/1 (6 disciplinas):* Análise de Dados, Banco de Dados II, Cidadania: Heterogeneidade e Diversidade, Cloud Computing, Programação Orientada a Objetos, Python Aplicado à Inteligência Artificial.
+- **Cursando no 4º Semestre (7 disciplinas):**
+  - Big Data, Analytics e Data Mining (108h)
+  - Ciência de Dados (42h)
+  - Deep Learning (168h)
+  - Machine Learning (54h)
+  - Projetos Integrados I (54h)
+  - Extensão (72h)
+  - Felicidade e Bem-Estar (96h)
+- **Indicador de Progresso:** 95% de conclusão estimada da graduação.
 
-## Formação acadêmica
+---
 
-A seção `#academico` mostra apenas disciplinas concluídas e em andamento. Disciplinas futuras não são exibidas. O indicador de conclusão da graduação está em `index.html`, no atributo `aria-valuenow` e na largura de `.academic-progress-value`; mantenha ambos com o mesmo percentual ao atualizar o progresso.
+## Projetos em Destaque no GitHub
 
-## Certificações
+Os projetos apresentados correspondem aos repositórios públicos da conta `wjr007`:
+1. **Coleção Deep Learning (Labs 01 ao 08 em PyTorch)**: `Deep-Learning-1-ao-8`
+2. **Deep Learning ResNet & Visão Computacional**: `Deep-Learning-Pytorch-ResNet`
+3. **Jarvis — Desktop AI Agent**: `jarvis`
+4. **Processamento de Linguagem Natural (PLN)**: `Processamento-de-Linguagem-Natural-PLN-`
+5. **Classificação de Imagens com CNN**: `Processamento-de-Imagem`
+6. **Análise Preditiva de Admissão com IA**: `Analise-Admissao-Candidatos-IA`
+7. **Análise de Portfólio Varejista B3**: `An-lise-de-Dados-`
+8. **Dashboard Analítico**: `Dashboard`
 
-A seção `#certificados` lista formações complementares verificadas nos certificados fornecidos. Ela exibe título, área, emissor, carga horária e data somente quando esses dados constam no documento. Os PDFs originais e QR codes não são publicados no site; atualize os cards diretamente em `index.html` quando houver novos certificados.
+---
 
-Cada card exibe uma prévia em PNG do respectivo certificado, com nomes iniciados por `certificado-`. Essas imagens são prova visual; substitua cada uma pela prévia correspondente ao renovar a certificação.
+## Como Executar Localmente
 
-O logotipo da Uniube está em `uniube-logo.png` e é exibido na seção acadêmica. Substitua-o apenas por uma imagem com uso autorizado.
-
-## Contato
-
-O WhatsApp é centralizado nos links `https://wa.me/553496583020` de `index.html`. Atualize todas as ocorrências juntas caso o número mude.
-
-## Prévia local
-
-Abra `index.html` em um servidor local. A prévia criada para esta tarefa usa `127.0.0.1` e exclui `web.pem` por segurança.
-
-## Fundo visual
-
-`background-ia.png` é a imagem de fundo global, aplicada em `style.css` com uma camada escura para manter o contraste do texto.
-
-## Segurança de credenciais
-
-A chave privada exposta foi removida do projeto e do histórico Git. Identifique e substitua qualquer credencial ou certificado associado antes de reutilizar o serviço. Este site estático não depende de chave privada local. Segredos devem permanecer no servidor ou no gerenciador de segredos do provedor; nunca no JavaScript público. Certificados públicos legítimos .crt e .cer são permitidos. Após a reescrita, colaboradores devem fazer um clone novo para evitar reintroduzir o histórico antigo.
-
+```powershell
+py -m http.server 8000
+```
+Acesse em: `http://localhost:8000`

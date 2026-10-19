@@ -1,469 +1,1004 @@
-<!--
-  Portfólio de Walteir Junior — página estática de apresentação profissional.
-  Documentação: DOCUMENTACAO.md §Atualização de projetos, §Formação acadêmica e §Certificações.
-  Scripts (ordem): style.css → script.js.
-  Onde editar: dados de perfil, estatísticas, formação acadêmica e projetos em destaque neste arquivo.
--->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Walteir Junior — IA & Data Science</title>
+    <title>Walteir Junior — IA & Data Science Portfolio</title>
+    <meta name="description" content="Portfólio de Walteir Luiz de Morais Junior. Graduando em Inteligência Artificial & Ciência de Dados. Especialista em PyTorch, Deep Learning, Visão Computacional, Análise de Dados e Agentes IA.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&family=Syne:wght@600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- NAV -->
-    <nav class="nav" id="navbar">
+    <a href="#hero" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- BACKGROUND EFFECTS -->
+    <div class="cyber-bg" aria-hidden="true">
+        <div class="cyber-grid"></div>
+        <div class="glow-orb orb-primary"></div>
+        <div class="glow-orb orb-secondary"></div>
+        <div class="scanlines"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="nav" id="navbar">
         <div class="nav-inner">
-            <span class="nav-logo">WJ<span class="accent">.</span></span>
-            <ul class="nav-links">
-                <li><a href="#hero">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#academico">Formação</a></li>
-                <li><a href="#certificados">Certificados</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato" class="nav-cta">Contato</a></li>
-            </ul>
-            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
+            <a href="#hero" class="nav-brand" aria-label="Walteir Junior - Início">
+                <span class="brand-bracket">[</span><span class="brand-name">WJ</span><span class="brand-dot">.</span><span class="brand-bracket">]</span>
+                <span class="brand-sub mono">AI·DATA</span>
+            </a>
 
-    <!-- HERO -->
-    <section class="hero" id="hero">
-        <div class="hero-bg">
-            <div class="hero-grid"></div>
-            <div class="hero-orb orb-1"></div>
-            <div class="hero-orb orb-2"></div>
-        </div>
-        <div class="hero-inner">
-            <div class="hero-text">
-                <div class="hero-badge">
-                    <span class="badge-dot"></span>
-                    Disponível para oportunidades
-                </div>
-                <h1>
-                    <span class="hero-name">Walteir</span>
-                    <span class="hero-name accent-line">Junior</span>
-                </h1>
-                <p class="hero-role">
-                    <span class="mono">&lt;</span>
-                    Estudante de IA · Ciência de Dados · Machine Learning
-                    <span class="mono">/&gt;</span>
-                </p>
-                <p class="hero-bio">
-                    Construindo soluções inteligentes com Python, dados e aprendizado de máquina. 
-                    Apaixonado por transformar dados em insights reais.
-                </p>
-                <div class="hero-actions">
-                    <a href="#projetos" class="btn-primary">Ver Projetos</a>
-                    <a href="#contato" class="btn-ghost">Entre em Contato</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/wjr007" target="_blank" aria-label="GitHub" class="social-btn">
-                        <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                        GitHub
-                    </a>
-                    <a href="https://www.linkedin.com/in/walteir-luiz-de-morais-junior-42a21928a/" target="_blank" aria-label="LinkedIn" class="social-btn">
-                        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        LinkedIn
-                    </a>
-                    <a href="https://wa.me/553496583020" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-btn">WhatsApp</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="photo-frame">
-                    <div class="photo-ring"></div>
-                    <img src="foto.png" alt="Walteir Junior" class="photo">
-                    <div class="photo-badge-float">
-                        <span class="mono">AI</span>
-                    </div>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-num">10</span>
-                        <span class="stat-label">Repos públicos</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-num">4</span>
-                        <span class="stat-label">Projetos em destaque</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-num">∞</span>
-                        <span class="stat-label">Curiosidade</span>
-                    </div>
-                </div>
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#hero" class="nav-link active"><span class="nav-num mono">00.</span> Início</a></li>
+                    <li><a href="#sobre" class="nav-link"><span class="nav-num mono">01.</span> Sobre</a></li>
+                    <li><a href="#skills" class="nav-link"><span class="nav-num mono">02.</span> Skills</a></li>
+                    <li><a href="#academico" class="nav-link"><span class="nav-num mono">03.</span> Formação</a></li>
+                    <li><a href="#projetos" class="nav-link"><span class="nav-num mono">04.</span> Projetos</a></li>
+                    <li><a href="#certificados" class="nav-link"><span class="nav-num mono">05.</span> Certificados</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://wa.me/553496583020" target="_blank" rel="noopener noreferrer" class="btn-nav-cta">
+                    <svg viewBox="0 0 24 24" class="btn-icon" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                    <span>Falar Comigo</span>
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navMenu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
             </div>
         </div>
-        <div class="scroll-hint">
-            <span>scroll</span>
-            <div class="scroll-line"></div>
-        </div>
-    </section>
+    </header>
 
-    <!-- SOBRE -->
-    <section class="sobre" id="sobre">
-        <div class="container">
-            <div class="section-label mono">// 01. sobre</div>
-            <div class="sobre-grid">
-                <div class="sobre-text">
-                    <h2>Olá, eu sou<br><span class="accent">Walteir Junior</span></h2>
-                    <p>
-                        Estudante de Inteligência Artificial com foco em ciência de dados, machine learning e 
-                        desenvolvimento de soluções práticas. Estou cursando disciplinas avançadas como 
-                        Python aplicado à IA, Cloud Computing e Análise de Dados.
+    <main>
+        <!-- HERO -->
+        <section class="hero" id="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-status-pill">
+                        <span class="pulse-indicator" aria-hidden="true"></span>
+                        <span class="mono">Graduação em IA & Ciência de Dados · 4º Semestre / Reta Final</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        <span class="hero-first">Walteir Luiz</span>
+                        <span class="hero-last text-gradient">de Morais Junior</span>
+                    </h1>
+
+                    <div class="hero-role-wrapper">
+                        <span class="mono role-prompt">&gt;</span>
+                        <p class="hero-role" id="heroRole">
+                            <span class="mono">&lt;</span>
+                            <span id="typed"></span>
+                            <span class="cursor-blink">_</span>
+                            <span class="mono">/&gt;</span>
+                        </p>
+                    </div>
+
+                    <p class="hero-description">
+                        Desenvolvendo arquiteturas de inteligência artificial de alta performance: modelos de <strong>Deep Learning com PyTorch (CNNs e ResNet)</strong>, pipelines de <strong>Ciência de Dados</strong>, modelos preditivos de machine learning e <strong>Agentes Autônomos de IA</strong>.
                     </p>
-                    <p>
-                        Meu objetivo é construir sistemas inteligentes que gerem valor real, unindo 
-                        fundamentos matemáticos sólidos com código eficiente e boas práticas de engenharia.
-                    </p>
-                    <a href="#contato" class="btn-primary">Vamos conversar →</a>
+
+                    <div class="hero-cta-group">
+                        <a href="#projetos" class="btn btn-primary">
+                            <span>Explorar Projetos</span>
+                            <svg viewBox="0 0 24 24" class="btn-arrow" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <a href="#academico" class="btn btn-secondary">
+                            <span>Ver Formação Acadêmica</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-socials">
+                        <span class="socials-label mono">CONECTAR:</span>
+                        <a href="https://github.com/wjr007" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="Perfil no GitHub">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/walteir-luiz-de-morais-junior-42a21928a/" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="Perfil no LinkedIn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://wa.me/553496583020" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="sobre-cards">
-                    <div class="info-card">
-                        <div class="info-icon">🎓</div>
-                        <div>
-                            <strong>Formação</strong>
-                            <span>IA e Ciência de Dados · Uniube</span>
+
+                <div class="hero-visual">
+                    <div class="hud-frame">
+                        <div class="hud-corner top-left"></div>
+                        <div class="hud-corner top-right"></div>
+                        <div class="hud-corner bottom-left"></div>
+                        <div class="hud-corner bottom-right"></div>
+                        
+                        <div class="photo-wrapper">
+                            <img src="foto.png" alt="Foto de perfil de Walteir Luiz de Morais Junior" class="profile-photo" width="380" height="460">
+                            <div class="photo-overlay-cyber"></div>
+                            <div class="hud-tag mono">ID: WJ-007 // AI-ENGINEER</div>
                         </div>
                     </div>
-                    <div class="info-card">
-                        <div class="info-icon">📍</div>
-                        <div>
-                            <strong>Localização</strong>
-                            <span>Brasil</span>
+
+                    <div class="hero-metrics-grid">
+                        <div class="metric-card">
+                            <span class="metric-val text-gradient mono" id="statRepos">12</span>
+                            <span class="metric-label">Repositórios Públicos</span>
                         </div>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">💻</div>
-                        <div>
-                            <strong>Foco atual</strong>
-                            <span>Python · ML · Data Science</span>
+                        <div class="metric-card">
+                            <span class="metric-val text-gradient mono">21</span>
+                            <span class="metric-label">Disciplinas Aprovadas</span>
                         </div>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">🚀</div>
-                        <div>
-                            <strong>Próximo passo</strong>
-                            <span>Deep Learning · Big Data</span>
+                        <div class="metric-card">
+                            <span class="metric-val text-gradient mono">8+</span>
+                            <span class="metric-label">Projetos em Destaque</span>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-val text-gradient mono">9.6</span>
+                            <span class="metric-label">Nota Máxima na Uniube</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- SKILLS -->
-    <section class="skills-section" id="skills">
-        <div class="container">
-            <div class="section-label mono">// 02. habilidades</div>
-            <h2 class="section-title">Stack & Tecnologias</h2>
-            <div class="skills-grid">
-
-                <div class="skill-category">
-                    <h3 class="skill-cat-title"><span class="accent mono">&gt;</span> Linguagens</h3>
-                    <div class="skill-pills">
-                        <span class="pill pill-main">🐍 Python</span>
-                        <span class="pill">🟨 JavaScript</span>
-                        <span class="pill">🌐 HTML/CSS</span>
-                        <span class="pill">🗃️ SQL</span>
+            <div class="scroll-beacon" aria-hidden="true">
+                <a href="#sobre" class="scroll-link" aria-label="Rolar para a seção sobre">
+                    <span class="scroll-text mono">SCROLL_DOWN</span>
+                    <div class="scroll-mouse">
+                        <div class="scroll-wheel"></div>
                     </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3 class="skill-cat-title"><span class="accent mono">&gt;</span> IA & Dados</h3>
-                    <div class="skill-pills">
-                        <span class="pill pill-main">Scikit-Learn</span>
-                        <span class="pill">Pandas</span>
-                        <span class="pill">NumPy</span>
-                        <span class="pill">Matplotlib</span>
-                        <span class="pill">Flask</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3 class="skill-cat-title"><span class="accent mono">&gt;</span> Ferramentas</h3>
-                    <div class="skill-pills">
-                        <span class="pill pill-main">Git / GitHub</span>
-                        <span class="pill">Figma</span>
-                        <span class="pill">VS Code</span>
-                        <span class="pill">🔗 n8n</span>
-                        <span class="pill">📊 Power BI</span>
-                        <span class="pill">Cloud</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3 class="skill-cat-title"><span class="accent mono">&gt;</span> Conceitos</h3>
-                    <div class="skill-pills">
-                        <span class="pill pill-main">Machine Learning</span>
-                        <span class="pill">Banco de Dados</span>
-                        <span class="pill">POO</span>
-                        <span class="pill">Estrutura de Dados</span>
-                    </div>
-                </div>
-
+                </a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FORMAÇÃO ACADÊMICA -->
-    <section class="academico" id="academico">
-        <div class="container">
-            <div class="section-label mono">// 03. formação</div>
-            <h2 class="section-title">Perfil Acadêmico</h2>
+        <!-- SOBRE -->
+        <section class="section sobre" id="sobre">
+            <div class="container">
+                <div class="section-tag mono">
+                    <span class="tag-bracket">//</span> 01. PROFILE_OVERVIEW
+                </div>
+                
+                <div class="sobre-grid">
+                    <div class="sobre-narrative">
+                        <h2 class="section-heading">Construindo inteligência com <span class="text-gradient">precisão matemática</span> e impacto prático.</h2>
+                        
+                        <p class="lead-text">
+                            Desenvolvedor focado em <strong>Inteligência Artificial, Deep Learning e Engenharia de Dados</strong>. Atualmente no 4º semestre (fase de conclusão em 2026) da graduação em <strong>Inteligência Artificial e Ciência de Dados pela Uniube</strong>, com histórico comprovado de dedicação e notas de destaque.
+                        </p>
+                        
+                        <p>
+                            Minha jornada prática engloba a implementação de <strong>redes neurais profundas com PyTorch</strong> (incluindo ResNet com skip connections, LeNet-5 e CNNs para visão computacional), processamento de linguagem natural (PLN), pipelines ETL com Databricks e Delta Lake, além de sistemas autônomos com agentes de IA.
+                        </p>
+                        
+                        <div class="highlight-quote">
+                            <span class="quote-bar"></span>
+                            <p class="mono">
+                                "Unir a teoria matemática e estatística ao desenvolvimento de software robusto, criando valor real por meio dos dados."
+                            </p>
+                        </div>
+                    </div>
 
-            <div class="academic-progress" aria-labelledby="academic-progress-title">
-                <div class="academic-progress-header">
+                    <div class="sobre-cards-grid">
+                        <div class="cyber-card">
+                            <div class="card-icon-hud">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                            </div>
+                            <div class="card-body">
+                                <span class="mono card-sub">FORMAÇÃO ACADÊMICA</span>
+                                <h3>IA & Ciência de Dados</h3>
+                                <p>Uniube · 4º Semestre / Reta Final (21 disciplinas aprovadas)</p>
+                            </div>
+                        </div>
+
+                        <div class="cyber-card">
+                            <div class="card-icon-hud">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                            </div>
+                            <div class="card-body">
+                                <span class="mono card-sub">FOCO ATUAL</span>
+                                <h3>Deep Learning & Visão</h3>
+                                <p>PyTorch, ResNet, CNNs, Transformers e Redes Convolucionais</p>
+                            </div>
+                        </div>
+
+                        <div class="cyber-card">
+                            <div class="card-icon-hud">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                            </div>
+                            <div class="card-body">
+                                <span class="mono card-sub">ENGENHARIA DE DADOS</span>
+                                <h3>Lakehouse & Analytics</h3>
+                                <p>Databricks, Delta Lake, SQL, MLflow e Análise Exploratória</p>
+                            </div>
+                        </div>
+
+                        <div class="cyber-card">
+                            <div class="card-icon-hud">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                            </div>
+                            <div class="card-body">
+                                <span class="mono card-sub">DISPONIBILIDADE</span>
+                                <h3>Mercado & Projetos</h3>
+                                <p>Aberto para oportunidades em IA, Ciência de Dados e Machine Learning</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="section skills-section" id="skills">
+            <div class="container">
+                <div class="section-tag mono">
+                    <span class="tag-bracket">//</span> 02. TECHNICAL_STACK
+                </div>
+                <h2 class="section-heading">Habilidades de Mercado & <span class="text-gradient">Tecnologias</span></h2>
+
+                <div class="skills-universe">
+                    <!-- CAT 1: DEEP LEARNING & AI -->
+                    <div class="skill-panel">
+                        <div class="panel-header">
+                            <span class="panel-indicator"></span>
+                            <h3>Deep Learning & IA</h3>
+                            <span class="mono panel-badge">CORE</span>
+                        </div>
+                        <div class="skill-chips-wrap">
+                            <span class="tech-chip highlight">PyTorch</span>
+                            <span class="tech-chip highlight">ResNet (Skip Connections)</span>
+                            <span class="tech-chip highlight">CNNs (Convolucionais)</span>
+                            <span class="tech-chip">LeNet-5</span>
+                            <span class="tech-chip">Scikit-Learn</span>
+                            <span class="tech-chip">NLP / PLN (spaCy & NLTK)</span>
+                            <span class="tech-chip">Computer Vision (OpenCV)</span>
+                            <span class="tech-chip">Agentes IA & Automação</span>
+                        </div>
+                    </div>
+
+                    <!-- CAT 2: DADOS & ANALYTICS -->
+                    <div class="skill-panel">
+                        <div class="panel-header">
+                            <span class="panel-indicator"></span>
+                            <h3>Ciência & Engenharia de Dados</h3>
+                            <span class="mono panel-badge">DATA</span>
+                        </div>
+                        <div class="skill-chips-wrap">
+                            <span class="tech-chip highlight">Pandas & NumPy</span>
+                            <span class="tech-chip highlight">Databricks & Delta Lake</span>
+                            <span class="tech-chip">MLflow</span>
+                            <span class="tech-chip">SQL (PostgreSQL / SQLite)</span>
+                            <span class="tech-chip">Power BI (Dashboards)</span>
+                            <span class="tech-chip">Modelagem & ETL</span>
+                            <span class="tech-chip">Estatística Aplicada</span>
+                            <span class="tech-chip">Matplotlib & Seaborn</span>
+                        </div>
+                    </div>
+
+                    <!-- CAT 3: LINGUAGENS & DESENVOLVIMENTO -->
+                    <div class="skill-panel">
+                        <div class="panel-header">
+                            <span class="panel-indicator"></span>
+                            <h3>Linguagens & Backend</h3>
+                            <span class="mono panel-badge">DEV</span>
+                        </div>
+                        <div class="skill-chips-wrap">
+                            <span class="tech-chip highlight">Python (Avançado)</span>
+                            <span class="tech-chip">TypeScript</span>
+                            <span class="tech-chip">JavaScript (ES6+)</span>
+                            <span class="tech-chip">Flask / REST APIs</span>
+                            <span class="tech-chip">HTML5 & Modern CSS</span>
+                            <span class="tech-chip">Programação Orientada a Objetos</span>
+                            <span class="tech-chip">Algoritmos & Estruturas de Dados</span>
+                        </div>
+                    </div>
+
+                    <!-- CAT 4: FERRAMENTAS & CLOUD -->
+                    <div class="skill-panel">
+                        <div class="panel-header">
+                            <span class="panel-indicator"></span>
+                            <h3>Infra, Cloud & Ferramentas</h3>
+                            <span class="mono panel-badge">OPS</span>
+                        </div>
+                        <div class="skill-chips-wrap">
+                            <span class="tech-chip highlight">Git & GitHub</span>
+                            <span class="tech-chip highlight">n8n (Agentes Autônomos)</span>
+                            <span class="tech-chip">Cloud Computing</span>
+                            <span class="tech-chip">Docker</span>
+                            <span class="tech-chip">Linux</span>
+                            <span class="tech-chip">VS Code</span>
+                            <span class="tech-chip">Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMAÇÃO ACADÊMICA -->
+        <section class="section academico" id="academico">
+            <div class="container">
+                <div class="section-tag mono">
+                    <span class="tag-bracket">//</span> 03. ACADEMIC_FORMATION
+                </div>
+                
+                <div class="academic-hero-card">
+                    <div class="academic-main-info">
+                        <div class="academic-badge-wrap">
+                            <span class="badge-status-approved">STATUS: MATRICULADO // SEMESTRE 4</span>
+                            <span class="mono badge-year">2025 – 2026</span>
+                        </div>
+                        <h2 class="academic-degree-title">Inteligência Artificial e Ciência de Dados</h2>
+                        <p class="academic-institution">
+                            <strong>Universidade de Uberaba (Uniube)</strong> · Polo Uberlândia - Centro (MG)
+                        </p>
+                        <p class="academic-summary-text">
+                            Matriz curricular focada em fundamentos matemáticos rigorosos, algoritmos complexos, arquiteturas neurais avançadas, banco de dados e engenharia de software aplicada à IA.
+                        </p>
+                    </div>
+                    <div class="academic-logo-box">
+                        <img src="uniube-logo.png" alt="Logotipo Oficial da Uniube" class="uniube-logo" width="140" height="48">
+                    </div>
+                </div>
+
+                <!-- PROGRESS BAR -->
+                <div class="progress-console" aria-labelledby="progTitle">
+                    <div class="progress-console-header">
+                        <span class="mono" id="progTitle">STATUS DA GRADUAÇÃO: 4º SEMESTRE (RETA FINAL DE CONCLUSÃO)</span>
+                        <span class="mono progress-percent">95%</span>
+                    </div>
+                    <div class="progress-bar-track" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar-fill" style="width: 95%;"></div>
+                    </div>
+                    <div class="progress-meta mono">
+                        <span>✅ 21 Disciplinas Concluídas com Aprovação</span>
+                        <span>⏳ 7 Disciplinas em Conclusão (2026/2)</span>
+                    </div>
+                </div>
+
+                <!-- TABS ACADÊMICAS -->
+                <div class="tabs-control">
+                    <button class="tab-btn active" data-tab="concluidas" id="tabConcluidasBtn">
+                        <span class="tab-icon">✅</span>
+                        <span>Aprovadas Concluídas</span>
+                        <span class="tab-badge mono">21</span>
+                    </button>
+                    <button class="tab-btn" data-tab="cursando" id="tabCursandoBtn">
+                        <span class="tab-icon">⏳</span>
+                        <span>Semestre 4 (Cursando)</span>
+                        <span class="tab-badge mono">7</span>
+                    </button>
+                    <button class="tab-btn" data-tab="resumo" id="tabResumoBtn">
+                        <span class="tab-icon">📊</span>
+                        <span>Carga Horária & Métricas</span>
+                    </button>
+                </div>
+
+                <!-- TAB CONTENT: CONCLUÍDAS (21) -->
+                <div class="tab-view active" id="view-concluidas" role="tabpanel" aria-labelledby="tabConcluidasBtn">
+                    <div class="disciplines-hud-grid">
+                        <div class="disc-card highlight-grade">
+                            <div class="disc-header"><span class="disc-code mono">DISC-90555</span><span class="disc-grade mono">NOTA: 9.6</span></div>
+                            <h4>Fundamentos de Administração e Economia</h4>
+                            <div class="disc-meta mono"><span>48h</span><span>2025/2</span><span class="status-ok">Aprovado</span></div>
+                        </div>
+
+                        <div class="disc-card highlight-grade">
+                            <div class="disc-header"><span class="disc-code mono">DISC-90548</span><span class="disc-grade mono">NOTA: 9.5</span></div>
+                            <h4>Gestão de Projetos</h4>
+                            <div class="disc-meta mono"><span>54h</span><span>2025/2</span><span class="status-ok">Aprovado</span></div>
+                        </div>
+
+                        <div class="disc-card highlight-grade">
+                            <div class="disc-header"><span class="disc-code mono">DISC-14187</span><span class="disc-grade mono">NOTA: 9.2</span></div>
+                            <h4>Matemática Aplicada à Inteligência Artificial</h4>
+                            <div class="disc-meta mono"><span>54h</span><span>2025/2</span><span class="status-ok">Aprovado</span></div>
+                        </div>
+
+                        <div class="disc-card highlight-grade">
+                            <div class="disc-header"><span class="disc-code mono">DISC-49323</span><span class="disc-grade mono">NOTA: 9.2</span></div>
+                            <h4>Laboratório de Programação</h4>
+                            <div class="disc-meta mono"><span>27h</span><span>2025/2</span><span class="status-ok">Aprovado</span></div>
+                        </div>
+
+                        <div class="disc-card highlight-grade">
+                            <div class="disc-header"><span class="disc-code mono">DISC-90539</span><span class="disc-grade mono">NOTA: 9.1</span></div>
+                            <h4>Algoritmos e Estruturas de Dados</h4>
+                            <div class="disc-meta mono"><span>57h</span><span>2025/1</span><span class="status-ok">Aprovado</span></div>
+                        </div>
+
+                        <div class="disc-card highlight-grade">
+                            <div class="disc-header"><span class="disc-code mono">DISC-49291</span><span class="disc-grade mono">NOTA: 9.1</span></div>
+                            <h4>Banco de Dados I</h4>
+                            <div class="disc-meta mono"><span>108h</span><span>2025/2</span><span class="status-ok">Aprovado</span></div>
+                        </div>
+
+                        <div class="disc-card highlight-grade">
+                            <div class="disc-header"><span class="disc-code mono">DISC-14188</span><span class="disc-grade mono">NOTA: 9.0</span></div>
+                            <h4>Análise de Dados</h4>
+                            <div class="disc-meta mono"><span>42h</span><span>2026/1</span><span class="status-ok">Aprovado</span></div>
+                        </div>
+
+                        <div class="disc-card highlight-grade">
+                            <div class="disc-header"><span class="disc-code mono">DISC-14189</span><span class="disc-grade mono">NOTA: 8.9</span></div>
+                            <h4>Cloud Computing</h4>
+                            <div class="disc-meta mono"><span>72h</span><span>2026/1</span><span class="status-ok">Aprovado</span></div>
+                        </div>
+
+                        <div class="disc-card highlight-grade">
+                            <div class="disc-header"><span class="disc-code mono">DISC-90534</span><span class="disc-grade mono">NOTA: 8.8</span></div>
+                            <h4>Tecnologias Digitais Emergentes</h4>
+                            <div class="disc-meta mono"><span>54h</span><span>2025/1</span><span class="status-ok">Aprovado</span></div>
+                        </div>
+
+                        <div class="disc-card highlight-grade">
+                            <div class="disc-header"><span class="disc-code mono">DISC-49297</span><span class="disc-grade mono">NOTA: 8.6</span></div>
+                            <h4>Programação Orientada a Objetos</h4>
+                            <div class="disc-meta mono"><span>84h</span><span>2026/1</span><span class="status-ok">Aprovado</span></div>
+                        </div>
+
+                        <div class="disc-card highlight-grade">
+                            <div class="disc-header"><span class="disc-code mono">DISC-49295</span><span class="disc-grade mono">NOTA: 8.5</span></div>
+                            <h4>Banco de Dados II</h4>
+                            <div class="disc-meta mono"><span>108h</span><span>2026/1</span><span class="status-ok">Aprovado</span></div>
+                        </div>
+
+                        <div class="disc-card highlight-grade">
+                            <div class="disc-header"><span class="disc-code mono">DISC-49317</span><span class="disc-grade mono">NOTA: 8.4</span></div>
+                            <h4>Segurança e Auditoria de Sistemas de Informação</h4>
+                            <div class="disc-meta mono"><span>96h</span><span>2025/2</span><span class="status-ok">Aprovado</span></div>
+                        </div>
+
+                        <div class="disc-card highlight-grade">
+                            <div class="disc-header"><span class="disc-code mono">DISC-49329</span><span class="disc-grade mono">NOTA: 8.2</span></div>
+                            <h4>Fundamentos de Tecnologia da Informação</h4>
+                            <div class="disc-meta mono"><span>27h</span><span>2025/1</span><span class="status-ok">Aprovado</span></div>
+                        </div>
+
+                        <div class="disc-card highlight-grade">
+                            <div class="disc-header"><span class="disc-code mono">DISC-14190</span><span class="disc-grade mono">NOTA: 8.0</span></div>
+                            <h4>Python Aplicado à Inteligência Artificial</h4>
+                            <div class="disc-meta mono"><span>54h</span><span>2026/1</span><span class="status-ok">Aprovado</span></div>
+                        </div>
+
+                        <div class="disc-card highlight-grade">
+                            <div class="disc-header"><span class="disc-code mono">DISC-49289</span><span class="disc-grade mono">NOTA: 8.0</span></div>
+                            <h4>Interface Homem-Máquina</h4>
+                            <div class="disc-meta mono"><span>54h</span><span>2025/1</span><span class="status-ok">Aprovado</span></div>
+                        </div>
+
+                        <div class="disc-card highlight-grade">
+                            <div class="disc-header"><span class="disc-code mono">DISC-12566</span><span class="disc-grade mono">NOTA: 8.0</span></div>
+                            <h4>Linguagem e Técnicas de Programação</h4>
+                            <div class="disc-meta mono"><span>69h</span><span>2025/2</span><span class="status-ok">Aprovado</span></div>
+                        </div>
+
+                        <div class="disc-card">
+                            <div class="disc-header"><span class="disc-code mono">DISC-63625</span><span class="disc-grade mono">NOTA: 7.8</span></div>
+                            <h4>Comportamento Empreendedor</h4>
+                            <div class="disc-meta mono"><span>54h</span><span>2025/1</span><span class="status-ok">Aprovado</span></div>
+                        </div>
+
+                        <div class="disc-card">
+                            <div class="disc-header"><span class="disc-code mono">DISC-90538</span><span class="disc-grade mono">NOTA: 7.6</span></div>
+                            <h4>Álgebra Linear e Geometria Analítica</h4>
+                            <div class="disc-meta mono"><span>78h</span><span>2025/1</span><span class="status-ok">Aprovado</span></div>
+                        </div>
+
+                        <div class="disc-card">
+                            <div class="disc-header"><span class="disc-code mono">DISC-90535</span><span class="disc-grade mono">NOTA: 7.5</span></div>
+                            <h4>Estatística Aplicada</h4>
+                            <div class="disc-meta mono"><span>54h</span><span>2025/1</span><span class="status-ok">Aprovado</span></div>
+                        </div>
+
+                        <div class="disc-card">
+                            <div class="disc-header"><span class="disc-code mono">DISC-49288</span><span class="disc-grade mono">NOTA: 7.2</span></div>
+                            <h4>Arquitetura e Organização de Computadores</h4>
+                            <div class="disc-meta mono"><span>54h</span><span>2025/1</span><span class="status-ok">Aprovado</span></div>
+                        </div>
+
+                        <div class="disc-card">
+                            <div class="disc-header"><span class="disc-code mono">DISC-99644</span><span class="disc-grade mono">NOTA: 7.0</span></div>
+                            <h4>Cidadania: Heterogeneidade e Diversidade</h4>
+                            <div class="disc-meta mono"><span>96h</span><span>2026/1</span><span class="status-ok">Aprovado</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB CONTENT: CURSANDO (7) -->
+                <div class="tab-view" id="view-cursando" role="tabpanel" aria-labelledby="tabCursandoBtn">
+                    <div class="disciplines-hud-grid">
+                        <div class="disc-card active-disc">
+                            <div class="disc-header"><span class="disc-code mono">DISC-14195</span><span class="status-in-progress mono">⏳ ENTURMADO</span></div>
+                            <h4>Deep Learning</h4>
+                            <p class="disc-desc">Redes neurais profundas, tensores, backpropagation, CNNs e visão computacional avançada.</p>
+                            <div class="disc-meta mono"><span>168h</span><span>2026/2</span><span>4º Semestre</span></div>
+                        </div>
+
+                        <div class="disc-card active-disc">
+                            <div class="disc-header"><span class="disc-code mono">DISC-14192</span><span class="status-in-progress mono">⏳ ENTURMADO</span></div>
+                            <h4>Machine Learning</h4>
+                            <p class="disc-desc">Algoritmos supervisionados e não-supervisionados, validação cruzada e métricas de desempenho.</p>
+                            <div class="disc-meta mono"><span>54h</span><span>2026/2</span><span>4º Semestre</span></div>
+                        </div>
+
+                        <div class="disc-card active-disc">
+                            <div class="disc-header"><span class="disc-code mono">DISC-14191</span><span class="status-in-progress mono">⏳ ENTURMADO</span></div>
+                            <h4>Big Data, Analytics e Data Mining</h4>
+                            <p class="disc-desc">Processamento distribuído, mineração de padrões em grandes massas de dados e arquitetura analítica.</p>
+                            <div class="disc-meta mono"><span>108h</span><span>2026/2</span><span>4º Semestre</span></div>
+                        </div>
+
+                        <div class="disc-card active-disc">
+                            <div class="disc-header"><span class="disc-code mono">DISC-49328</span><span class="status-in-progress mono">⏳ ENTURMADO</span></div>
+                            <h4>Ciência de Dados</h4>
+                            <p class="disc-desc">Pipelines analíticos completos, exploração estatística de dados e visualização executiva.</p>
+                            <div class="disc-meta mono"><span>42h</span><span>2026/2</span><span>4º Semestre</span></div>
+                        </div>
+
+                        <div class="disc-card active-disc">
+                            <div class="disc-header"><span class="disc-code mono">DISC-14193</span><span class="status-in-progress mono">⏳ ENTURMADO</span></div>
+                            <h4>Projetos Integrados I</h4>
+                            <p class="disc-desc">Aplicação prática multidisciplinar dos conceitos de IA em solução integrada de software.</p>
+                            <div class="disc-meta mono"><span>54h</span><span>2026/2</span><span>Equivalência</span></div>
+                        </div>
+
+                        <div class="disc-card active-disc">
+                            <div class="disc-header"><span class="disc-code mono">DISC-99646</span><span class="status-in-progress mono">⏳ ENTURMADO</span></div>
+                            <h4>Extensão</h4>
+                            <p class="disc-desc">Atividades práticas de extensão universitária e impacto em comunidade tecnológica.</p>
+                            <div class="disc-meta mono"><span>72h</span><span>2026/2</span><span>4º Semestre</span></div>
+                        </div>
+
+                        <div class="disc-card active-disc">
+                            <div class="disc-header"><span class="disc-code mono">DISC-99642</span><span class="status-in-progress mono">⏳ ENTURMADO</span></div>
+                            <h4>Felicidade e Bem-Estar</h4>
+                            <p class="disc-desc">Habilidades comportamentais, inteligência emocional e trabalho em equipes interdisciplinares.</p>
+                            <div class="disc-meta mono"><span>96h</span><span>2026/2</span><span>4º Semestre</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB CONTENT: RESUMO & MÉTRICAS -->
+                <div class="tab-view" id="view-resumo" role="tabpanel" aria-labelledby="tabResumoBtn">
+                    <div class="academic-metrics-row">
+                        <div class="summary-metric-box">
+                            <span class="metric-big mono text-gradient">1.404h</span>
+                            <span class="metric-caption">Carga Horária Concluída com Aprovação</span>
+                        </div>
+                        <div class="summary-metric-box">
+                            <span class="metric-big mono text-gradient">594h</span>
+                            <span class="metric-caption">Carga Horária no 4º Semestre (2026/2)</span>
+                        </div>
+                        <div class="summary-metric-box">
+                            <span class="metric-big mono text-gradient">2.508h</span>
+                            <span class="metric-caption">Carga Horária Total da Graduação</span>
+                        </div>
+                    </div>
+                    <div class="official-audit-card">
+                        <div class="audit-icon">🛡️</div>
+                        <div>
+                            <h4>Informações Oficiais Auditadas</h4>
+                            <p class="mono">Documento: Histórico emitido sob Matrícula 5173156 · Polo Uberlândia Centro (MG) · Universidade de Uberaba.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJETOS -->
+        <section class="section projetos" id="projetos">
+            <div class="container">
+                <div class="section-tag mono">
+                    <span class="tag-bracket">//</span> 04. FEATURED_REPOSITORIES
+                </div>
+                
+                <div class="projects-section-header">
                     <div>
-                        <span class="mono" id="academic-progress-title">Cursando IA e Ciência de Dados</span>
-                        <p>Graduação em andamento na Uniube</p>
+                        <h2 class="section-heading">Projetos & <span class="text-gradient">Repositórios GitHub</span></h2>
+                        <p class="section-subtext">Soluções reais com código aberto, notebooks documentados e arquiteturas de ponta.</p>
                     </div>
-                    <img src="uniube-logo.png" class="university-logo" alt="Uniube">
+
+                    <!-- FILTROS DE PROJETOS -->
+                    <div class="project-filters" role="tablist" aria-label="Filtrar projetos por categoria">
+                        <button class="filter-btn active" data-filter="all">Todos <span class="mono">(8)</span></button>
+                        <button class="filter-btn" data-filter="ai">Deep Learning & IA <span class="mono">(4)</span></button>
+                        <button class="filter-btn" data-filter="data">Data Science & NLP <span class="mono">(2)</span></button>
+                        <button class="filter-btn" data-filter="systems">Sistemas & Web <span class="mono">(2)</span></button>
+                    </div>
                 </div>
-                <div class="academic-progress-summary"><strong>80%</strong><span>de conclusão estimada</span></div>
-                <div class="academic-progress-track" role="progressbar" aria-label="Conclusão estimada da graduação" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80">
-                    <span class="academic-progress-value" style="width: 80%"></span>
+
+                <div class="projects-grid" id="projectsGrid">
+
+                    <!-- PROJETO 1: DEEP LEARNING LABS 01 AO 08 (NOVO) -->
+                    <article class="project-hud-card featured" data-category="ai">
+                        <div class="card-glow-edge"></div>
+                        <div class="project-top-bar">
+                            <div class="project-badge-featured mono">★ DESTAQUE DEEP LEARNING</div>
+                            <span class="project-id mono">01 // REPO-PUBLIC</span>
+                        </div>
+                        <h3 class="project-title">
+                            <a href="https://github.com/wjr007/Deep-Learning-1-ao-8" target="_blank" rel="noopener noreferrer">Coleção Deep Learning (Labs 01 ao 08 em PyTorch)</a>
+                        </h3>
+                        <p class="project-description">
+                            Série completa e progressiva de laboratórios práticos em PyTorch cobrindo fundamentos matemáticos, Tensores, Autograd, Perceptrons, MLPs, regularização, Redes Convolucionais (CNNs) e Transfer Learning com ResNet para visão computacional.
+                        </p>
+                        <div class="project-tags-wrap">
+                            <span class="tag-pill">PyTorch</span>
+                            <span class="tag-pill">Deep Learning</span>
+                            <span class="tag-pill">CNN</span>
+                            <span class="tag-pill">ResNet</span>
+                            <span class="tag-pill">Computer Vision</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="https://github.com/wjr007/Deep-Learning-1-ao-8" target="_blank" rel="noopener noreferrer" class="link-github-repo">
+                                <span>Ver Repositório</span>
+                                <svg viewBox="0 0 24 24" class="arrow-svg" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROJETO 2: RESNET VISÃO COMPUTACIONAL (NOVO) -->
+                    <article class="project-hud-card featured" data-category="ai">
+                        <div class="card-glow-edge"></div>
+                        <div class="project-top-bar">
+                            <div class="project-badge-featured mono">★ ARQUITETURA CNN</div>
+                            <span class="project-id mono">02 // REPO-PUBLIC</span>
+                        </div>
+                        <h3 class="project-title">
+                            <a href="https://github.com/wjr007/Deep-Learning-Pytorch-ResNet" target="_blank" rel="noopener noreferrer">Deep Learning ResNet & Visão Computacional Avançada</a>
+                        </h3>
+                        <p class="project-description">
+                            Implementação em PyTorch da arquitetura LeNet-5 e Redes Residuais profundas (ResNet com skip connections). O laboratório analisa como atenuar o problema do vanishing gradient e elevar a acurácia em tarefas complexas de reconhecimento visual.
+                        </p>
+                        <div class="project-tags-wrap">
+                            <span class="tag-pill">PyTorch</span>
+                            <span class="tag-pill">ResNet</span>
+                            <span class="tag-pill">Skip Connections</span>
+                            <span class="tag-pill">LeNet-5</span>
+                            <span class="tag-pill">Vision</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="https://github.com/wjr007/Deep-Learning-Pytorch-ResNet" target="_blank" rel="noopener noreferrer" class="link-github-repo">
+                                <span>Ver Repositório</span>
+                                <svg viewBox="0 0 24 24" class="arrow-svg" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROJETO 3: JARVIS DESKTOP AI AGENT -->
+                    <article class="project-hud-card" data-category="ai">
+                        <div class="card-glow-edge"></div>
+                        <div class="project-top-bar">
+                            <span class="project-badge-cat mono">AI AGENT</span>
+                            <span class="project-id mono">03 // REPO-PUBLIC</span>
+                        </div>
+                        <h3 class="project-title">
+                            <a href="https://github.com/wjr007/jarvis" target="_blank" rel="noopener noreferrer">Jarvis — Desktop AI Agent</a>
+                        </h3>
+                        <p class="project-description">
+                            Assistente desktop autônomo em Python acionado por palmas e comandos de voz, com decomposição de planos multi-etapa, controle de sistema e integração com base de conhecimento no Obsidian.
+                        </p>
+                        <div class="project-tags-wrap">
+                            <span class="tag-pill">Python</span>
+                            <span class="tag-pill">AI Agent</span>
+                            <span class="tag-pill">Speech Recognition</span>
+                            <span class="tag-pill">Automação</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="https://github.com/wjr007/jarvis" target="_blank" rel="noopener noreferrer" class="link-github-repo">
+                                <span>Ver Repositório</span>
+                                <svg viewBox="0 0 24 24" class="arrow-svg" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROJETO 4: PLN (ANÁLISE DE SENTIMENTOS) -->
+                    <article class="project-hud-card" data-category="data">
+                        <div class="card-glow-edge"></div>
+                        <div class="project-top-bar">
+                            <span class="project-badge-cat mono">NLP / PLN</span>
+                            <span class="project-id mono">04 // REPO-PUBLIC</span>
+                        </div>
+                        <h3 class="project-title">
+                            <a href="https://github.com/wjr007/Processamento-de-Linguagem-Natural-PLN-" target="_blank" rel="noopener noreferrer">Processamento de Linguagem Natural (PLN)</a>
+                        </h3>
+                        <p class="project-description">
+                            Pipeline completo de análise de sentimentos em mídias sociais: pré-processamento de texto, tokenização, remoção de stopwords, lematização, vetorização TF-IDF e classificação estatística.
+                        </p>
+                        <div class="project-tags-wrap">
+                            <span class="tag-pill">Python</span>
+                            <span class="tag-pill">NLTK</span>
+                            <span class="tag-pill">Scikit-Learn</span>
+                            <span class="tag-pill">TF-IDF</span>
+                            <span class="tag-pill">NLP</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="https://github.com/wjr007/Processamento-de-Linguagem-Natural-PLN-" target="_blank" rel="noopener noreferrer" class="link-github-repo">
+                                <span>Ver Repositório</span>
+                                <svg viewBox="0 0 24 24" class="arrow-svg" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROJETO 5: PROCESSAMENTO DE IMAGEM -->
+                    <article class="project-hud-card" data-category="ai">
+                        <div class="card-glow-edge"></div>
+                        <div class="project-top-bar">
+                            <span class="project-badge-cat mono">COMPUTER VISION</span>
+                            <span class="project-id mono">05 // REPO-PUBLIC</span>
+                        </div>
+                        <h3 class="project-title">
+                            <a href="https://github.com/wjr007/Processamento-de-Imagem" target="_blank" rel="noopener noreferrer">Classificação de Imagens com CNN</a>
+                        </h3>
+                        <p class="project-description">
+                            Modelo convolucional de classificação de imagens (Cats vs Dogs) com técnicas de data augmentation, camadas de pooling e regularização para prevenção de overfitting e alta generalização.
+                        </p>
+                        <div class="project-tags-wrap">
+                            <span class="tag-pill">PyTorch</span>
+                            <span class="tag-pill">CNN</span>
+                            <span class="tag-pill">Data Augmentation</span>
+                            <span class="tag-pill">Visão</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="https://github.com/wjr007/Processamento-de-Imagem" target="_blank" rel="noopener noreferrer" class="link-github-repo">
+                                <span>Ver Repositório</span>
+                                <svg viewBox="0 0 24 24" class="arrow-svg" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROJETO 6: ANÁLISE DE ADMISSÃO COM IA -->
+                    <article class="project-hud-card" data-category="data">
+                        <div class="card-glow-edge"></div>
+                        <div class="project-top-bar">
+                            <span class="project-badge-cat mono">MACHINE LEARNING</span>
+                            <span class="project-id mono">06 // REPO-PUBLIC</span>
+                        </div>
+                        <h3 class="project-title">
+                            <a href="https://github.com/wjr007/Analise-Admissao-Candidatos-IA" target="_blank" rel="noopener noreferrer">Análise Preditiva de Admissão com IA</a>
+                        </h3>
+                        <p class="project-description">
+                            Pipeline analítico integrado com SQL, análise exploratória (EDA), engenharia de atributos, clustering e modelos de classificação preditiva para triagem e admissão de candidatos.
+                        </p>
+                        <div class="project-tags-wrap">
+                            <span class="tag-pill">Machine Learning</span>
+                            <span class="tag-pill">Random Forest</span>
+                            <span class="tag-pill">EDA</span>
+                            <span class="tag-pill">Clustering</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="https://github.com/wjr007/Analise-Admissao-Candidatos-IA" target="_blank" rel="noopener noreferrer" class="link-github-repo">
+                                <span>Ver Repositório</span>
+                                <svg viewBox="0 0 24 24" class="arrow-svg" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROJETO 7: ANÁLISE DE DADOS VAREJO B3 -->
+                    <article class="project-hud-card" data-category="systems">
+                        <div class="card-glow-edge"></div>
+                        <div class="project-top-bar">
+                            <span class="project-badge-cat mono">DATA & FINANÇAS</span>
+                            <span class="project-id mono">07 // REPO-PUBLIC</span>
+                        </div>
+                        <h3 class="project-title">
+                            <a href="https://github.com/wjr007/An-lise-de-Dados-" target="_blank" rel="noopener noreferrer">Análise de Portfólio Varejista B3</a>
+                        </h3>
+                        <p class="project-description">
+                            Estudo econométrico e estatístico de ativos do setor de varejo na B3, com ingestão histórica de dados, armazenamento relacional em SQLite e visualizações gráficas de volatilidade e retorno.
+                        </p>
+                        <div class="project-tags-wrap">
+                            <span class="tag-pill">Python</span>
+                            <span class="tag-pill">Pandas</span>
+                            <span class="tag-pill">B3</span>
+                            <span class="tag-pill">SQLite</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="https://github.com/wjr007/An-lise-de-Dados-" target="_blank" rel="noopener noreferrer" class="link-github-repo">
+                                <span>Ver Repositório</span>
+                                <svg viewBox="0 0 24 24" class="arrow-svg" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROJETO 8: DASHBOARD WEB -->
+                    <article class="project-hud-card" data-category="systems">
+                        <div class="card-glow-edge"></div>
+                        <div class="project-top-bar">
+                            <span class="project-badge-cat mono">WEB & DASHBOARDS</span>
+                            <span class="project-id mono">08 // REPO-PUBLIC</span>
+                        </div>
+                        <h3 class="project-title">
+                            <a href="https://github.com/wjr007/Dashboard" target="_blank" rel="noopener noreferrer">Dashboard Analítico Interativo</a>
+                        </h3>
+                        <p class="project-description">
+                            Interface visual moderna desenvolvida em TypeScript para monitoramento de métricas essenciais, exploração de indicadores de negócio e renderização de dados em tempo real.
+                        </p>
+                        <div class="project-tags-wrap">
+                            <span class="tag-pill">TypeScript</span>
+                            <span class="tag-pill">Data Viz</span>
+                            <span class="tag-pill">Dashboard</span>
+                            <span class="tag-pill">Frontend</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="https://github.com/wjr007/Dashboard" target="_blank" rel="noopener noreferrer" class="link-github-repo">
+                                <span>Ver Repositório</span>
+                                <svg viewBox="0 0 24 24" class="arrow-svg" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
                 </div>
             </div>
+        </section>
 
-            <div class="tab-bar">
-                <button class="tab active" data-tab="concluidas">✅ Concluídas <span class="tab-count">15</span></button>
-                <button class="tab" data-tab="cursando">⏳ Cursando <span class="tab-count">5</span></button>
-            </div>
+        <!-- CERTIFICAÇÕES -->
+        <section class="section certificados" id="certificados">
+            <div class="container">
+                <div class="section-tag mono">
+                    <span class="tag-bracket">//</span> 05. COMPLEMENTARY_CERTIFICATIONS
+                </div>
+                <h2 class="section-heading">Certificações & <span class="text-gradient">Imersões Práticas</span></h2>
 
-            <div class="tab-panel active" id="tab-concluidas">
-                <div class="disciplines-grid">
-                    <div class="discipline">Álgebra Linear e Geometria Analítica</div>
-                    <div class="discipline">Algoritmos e Estruturas de Dados</div>
-                    <div class="discipline">Arquitetura e Organização de Computadores</div>
-                    <div class="discipline">Banco de Dados I</div>
-                    <div class="discipline">Comportamento Empreendedor</div>
-                    <div class="discipline">Estatística Aplicada</div>
-                    <div class="discipline">Fundamentos de Administração e Economia</div>
-                    <div class="discipline">Fundamentos de Tecnologia da Informação</div>
-                    <div class="discipline">Gestão de Projetos</div>
-                    <div class="discipline">Interface Homem-Máquina</div>
-                    <div class="discipline">Laboratório de Programação</div>
-                    <div class="discipline">Linguagem e Técnicas de Programação</div>
-                    <div class="discipline">Matemática Aplicada à IA</div>
-                    <div class="discipline">Segurança e Auditoria de Sistemas</div>
-                    <div class="discipline">Tecnologias Digitais Emergentes</div>
+                <div class="certificates-grid">
+                    <article class="cert-card-hud featured">
+                        <div class="cert-proof-wrap">
+                            <img src="certificado-databricks.png" alt="Certificado Imersão Databricks e Claude Code" class="cert-img" loading="lazy">
+                        </div>
+                        <div class="cert-body">
+                            <span class="cert-track mono">DADOS & IA · 8 HORAS</span>
+                            <h3>Imersão Databricks + Claude Code</h3>
+                            <p>Lakehouse com Databricks, Delta Lake, orquestração, MLflow e desenvolvimento de software acelerado por IA.</p>
+                            <div class="cert-meta mono">
+                                <span>Jornada de Dados</span>
+                                <span>Agosto / 2026</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cert-card-hud">
+                        <div class="cert-proof-wrap">
+                            <img src="certificado-agentes-ia.png" alt="Certificado Imersão Agentes IA" class="cert-img" loading="lazy">
+                        </div>
+                        <div class="cert-body">
+                            <span class="cert-track mono">INTELIGÊNCIA ARTIFICIAL · 8 HORAS</span>
+                            <h3>Imersão Agentes IA</h3>
+                            <p>Arquitetura de agentes autônomos, chamadas de funções (function calling), integração com LLMs e fluxos multi-agente.</p>
+                            <div class="cert-meta mono">
+                                <span>Hashtag Treinamentos</span>
+                                <span>Fevereiro / 2026</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cert-card-hud">
+                        <div class="cert-proof-wrap">
+                            <img src="certificado-power-bi.png" alt="Certificado Intensivão Power BI" class="cert-img" loading="lazy">
+                        </div>
+                        <div class="cert-body">
+                            <span class="cert-track mono">ANÁLISE DE DADOS · 8 HORAS</span>
+                            <h3>Intensivão de Power BI</h3>
+                            <p>Modelagem relacional de dados, DAX, criação de dashboards interativos e storytelling com dados de negócio.</p>
+                            <div class="cert-meta mono">
+                                <span>Hashtag Treinamentos</span>
+                                <span>Fevereiro / 2026</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cert-card-hud">
+                        <div class="cert-proof-wrap">
+                            <img src="certificado-expert-ads.png" alt="Certificado Expert Ads" class="cert-img" loading="lazy">
+                        </div>
+                        <div class="cert-body">
+                            <span class="cert-track mono">MÉTRICAS & TRÁFEGO · 100 HORAS</span>
+                            <h3>Expert Ads — Gestão de Tráfego</h3>
+                            <p>Especialista em tráfego pago, análise de KPIs de aquisição de clientes, campanhas de conversão e dados de vendas.</p>
+                            <div class="cert-meta mono">
+                                <span>Destrava Academy · Via Up</span>
+                                <span>Abril / 2024</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cert-card-hud">
+                        <div class="cert-proof-wrap">
+                            <img src="certificado-photoshop.png" alt="Certificado Photoshop" class="cert-img" loading="lazy">
+                        </div>
+                        <div class="cert-body">
+                            <span class="cert-track mono">DESIGN & UI</span>
+                            <h3>Photoshop Sem Mistério</h3>
+                            <p>Tratamento visual, composição de imagens, wireframing e refinamento estético de interfaces.</p>
+                            <div class="cert-meta mono">
+                                <span>Photoshop Sem Mistério</span>
+                                <span>Concluído</span>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
+        </section>
 
-            <div class="tab-panel" id="tab-cursando">
-                <div class="disciplines-grid">
-                    <div class="discipline in-progress">Big Data, Analytics e Data Mining</div>
-                    <div class="discipline in-progress">Ciência de Dados</div>
-                    <div class="discipline in-progress">Deep Learning</div>
-                    <div class="discipline in-progress">Machine Learning</div>
-                    <div class="discipline in-progress">Projetos Integrados I</div>
+        <!-- CONTATO -->
+        <section class="section contato" id="contato">
+            <div class="container">
+                <div class="section-tag mono">
+                    <span class="tag-bracket">//</span> 06. INITIATE_COMMUNICATION
                 </div>
-            </div>
+                
+                <div class="contato-cyber-box">
+                    <div class="contato-info-side">
+                        <h2 class="section-heading">Vamos construir a próxima solução <span class="text-gradient">inteligente</span> juntos?</h2>
+                        <p>
+                            Estou disponível para oportunidades como <strong>Desenvolvedor de IA, Engenheiro de Machine Learning ou Analista de Dados</strong>. Entre em contato direto pelo WhatsApp ou pelas redes:
+                        </p>
 
-        </div>
-    </section>
+                        <div class="contact-channels">
+                            <a href="https://wa.me/553496583020" target="_blank" rel="noopener noreferrer" class="contact-card-btn whatsapp-highlight">
+                                <div class="btn-channel-icon">
+                                    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                                </div>
+                                <div class="btn-channel-text">
+                                    <span class="mono channel-label">RESPOSTA IMEDIATA:</span>
+                                    <strong>WhatsApp: +55 (34) 9658-3020</strong>
+                                </div>
+                            </a>
 
-    <!-- CERTIFICAÇÕES -->
-    <section class="certificados" id="certificados">
-        <div class="container">
-            <div class="section-label mono">// 04. certificações</div>
-            <h2 class="section-title">Formação Complementar</h2>
-            <div class="certificate-carousel" aria-label="Galeria rotativa de certificados">
-                <div class="certificate-track">
-                    <img src="certificado-databricks.png" alt="Certificado Databricks e Claude Code">
-                    <img src="certificado-power-bi.png" alt="Certificado Power BI">
-                    <img src="certificado-agentes-ia.png" alt="Certificado Agentes IA">
-                    <img src="certificado-expert-ads.png" alt="Certificado Expert Ads">
-                    <img src="certificado-photoshop.png" alt="Certificado Photoshop">
-                </div>
-            </div>
-            <div class="certificates-grid">
-                <article class="certificate-card featured">
-                    <span class="certificate-type mono">DADOS & IA</span>
-                    <img src="certificado-databricks.png" class="certificate-proof" alt="Certificado da Imersão Databricks e Claude Code">
-                    <h3>Imersão Databricks + Claude Code</h3>
-                    <p>Projeto prático de área de dados e vendas com Databricks, Delta Lake, MLflow e desenvolvimento assistido por IA.</p>
-                    <footer><span>Jornada de Dados</span><span>8 horas · ago. 2026</span></footer>
-                </article>
-                <article class="certificate-card">
-                    <span class="certificate-type mono">ANÁLISE DE DADOS</span>
-                    <img src="certificado-power-bi.png" class="certificate-proof" alt="Certificado do Intensivão de Power BI">
-                    <h3>Intensivão de Power BI</h3>
-                    <p>Participação em formação intensiva de Power BI.</p>
-                    <footer><span>Hashtag Treinamentos</span><span>8 horas · fev. 2026</span></footer>
-                </article>
-                <article class="certificate-card">
-                    <span class="certificate-type mono">INTELIGÊNCIA ARTIFICIAL</span>
-                    <img src="certificado-agentes-ia.png" class="certificate-proof" alt="Certificado da Imersão Agentes IA">
-                    <h3>Imersão Agentes IA</h3>
-                    <p>Formação intensiva sobre agentes de inteligência artificial.</p>
-                    <footer><span>Hashtag Treinamentos</span><span>8 horas · fev. 2026</span></footer>
-                </article>
-                <article class="certificate-card">
-                    <span class="certificate-type mono">MARKETING DIGITAL</span>
-                    <img src="certificado-expert-ads.png" class="certificate-proof" alt="Certificado Expert Ads">
-                    <h3>Expert Ads</h3>
-                    <p>Especialista em vendas com Facebook Ads e gestão de campanhas.</p>
-                    <footer><span>Destrava Academy · Via Up</span><span>100 horas · abr. 2024</span></footer>
-                </article>
-                <article class="certificate-card">
-                    <span class="certificate-type mono">DESIGN</span>
-                    <img src="certificado-photoshop.png" class="certificate-proof" alt="Certificado Photoshop Sem Mistério">
-                    <h3>Photoshop Sem Mistério</h3>
-                    <p>Curso concluído com foco nos exercícios práticos de Photoshop.</p>
-                    <footer><span>Photoshop Sem Mistério</span><span>Certificado de conclusão</span></footer>
-                </article>
-            </div>
-        </div>
-    </section>
+                            <a href="https://www.linkedin.com/in/walteir-luiz-de-morais-junior-42a21928a/" target="_blank" rel="noopener noreferrer" class="contact-card-btn">
+                                <div class="btn-channel-icon">
+                                    <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                </div>
+                                <div class="btn-channel-text">
+                                    <span class="mono channel-label">REDE PROFISSIONAL:</span>
+                                    <strong>linkedin.com/in/walteir-luiz-de-morais-junior</strong>
+                                </div>
+                            </a>
 
-    <!-- PROJETOS -->
-    <section class="projetos" id="projetos">
-        <div class="container">
-            <div class="section-label mono">// 05. projetos</div>
-            <h2 class="section-title">Projetos em Destaque</h2>
-            <div class="projects-grid">
-
-                <div class="project-card featured">
-                    <div class="project-top">
-                        <div class="project-number mono">01</div>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>Scikit-Learn</span>
-                            <span>Flask</span>
+                            <a href="https://github.com/wjr007" target="_blank" rel="noopener noreferrer" class="contact-card-btn">
+                                <div class="btn-channel-icon">
+                                    <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                                </div>
+                                <div class="btn-channel-text">
+                                    <span class="mono channel-label">REPOSITÓRIOS PÚBLICOS:</span>
+                                    <strong>github.com/wjr007</strong>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                    <h3>Jarvis — Desktop AI Agent</h3>
-                    <p>Assistente desktop em Python ativado por palmas e voz, com planos multi-etapa, integração com Obsidian e console local.</p>
-                    <div class="project-footer">
-                        <a href="https://github.com/wjr007/jarvis" target="_blank" rel="noopener noreferrer" class="project-link">Ver no GitHub →</a>
-                    </div>
-                </div>
 
-                <div class="project-card">
-                    <div class="project-top">
-                        <div class="project-number mono">02</div>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>Pandas</span>
-                            <span>SQLite</span>
+                    <div class="contato-badge-side">
+                        <div class="hud-box-inner">
+                            <span class="badge-status-dot"></span>
+                            <span class="mono box-state">SITUAÇÃO ATUAL</span>
+                            <h3>Disponível para Projetos & Contratação</h3>
+                            <p>Projetos de IA, Deep Learning, Engenharia de Dados e Soluções Tecnológicas.</p>
+                            <a href="https://wa.me/553496583020" target="_blank" rel="noopener noreferrer" class="btn btn-primary full-width">
+                                <span>Iniciar Conversa no WhatsApp</span>
+                            </a>
                         </div>
-                    </div>
-                    <h3>Análise de Portfólio Varejista B3</h3>
-                    <p>Análise estatística de ações do varejo na B3, com coleta de dados históricos, visualizações e relatórios de resultados.</p>
-                    <div class="project-footer">
-                        <a href="https://github.com/wjr007/An-lise-de-Dados-" target="_blank" rel="noopener noreferrer" class="project-link">Ver no GitHub →</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-top">
-                        <div class="project-number mono">03</div>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>Scikit-learn</span>
-                            <span>Random Forest</span>
-                        </div>
-                    </div>
-                    <h3>Análise de Admissão com IA</h3>
-                    <p>Pipeline de dados para admissão universitária: SQL, análise exploratória, engenharia de atributos, clustering e classificação preditiva.</p>
-                    <div class="project-footer">
-                        <a href="https://github.com/wjr007/Analise-Admissao-Candidatos-IA" target="_blank" rel="noopener noreferrer" class="project-link">Ver no GitHub →</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-top">
-                        <div class="project-number mono">04</div>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>spaCy</span>
-                            <span>NLTK</span>
-                        </div>
-                    </div>
-                    <h3>Processamento de Linguagem Natural</h3>
-                    <p>Pipeline de análise de sentimentos em tweets com tokenização, lematização, TF-IDF e classificação por regressão logística.</p>
-                    <div class="project-footer">
-                        <a href="https://github.com/wjr007/Processamento-de-Linguagem-Natural-PLN-" target="_blank" rel="noopener noreferrer" class="project-link">Ver no GitHub →</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-top"><div class="project-number mono">05</div><div class="project-tags"><span>Python</span><span>PyTorch</span><span>CNN</span></div></div>
-                    <h3>Classificação de Imagens</h3>
-                    <p>Rede neural convolucional para classificação de gatos e cachorros, com data augmentation, regularização e avaliação de desempenho.</p>
-                    <div class="project-footer"><a href="https://github.com/wjr007/Processamento-de-Imagem" target="_blank" rel="noopener noreferrer" class="project-link">Ver no GitHub →</a></div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-top"><div class="project-number mono">06</div><div class="project-tags"><span>Java</span><span>SQL</span><span>Sistema</span></div></div>
-                    <h3>Sistema Loja</h3>
-                    <p>Projeto de sistema para gestão de loja, desenvolvido como parte da evolução prática em programação e banco de dados.</p>
-                    <div class="project-footer"><a href="https://github.com/wjr007/Sistema-Loja" target="_blank" rel="noopener noreferrer" class="project-link">Ver no GitHub →</a></div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-top"><div class="project-number mono">07</div><div class="project-tags"><span>Web</span><span>Dashboard</span><span>UI</span></div></div>
-                    <h3>Dashboard</h3>
-                    <p>Interface de dashboard para visualização de informações e exploração de dados em uma experiência web organizada.</p>
-                    <div class="project-footer"><a href="https://github.com/wjr007/Dashboard" target="_blank" rel="noopener noreferrer" class="project-link">Ver no GitHub →</a></div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTATO -->
-    <section class="contato" id="contato">
-        <div class="container">
-            <div class="section-label mono">// 06. contato</div>
-            <div class="contato-inner">
-                <div class="contato-text">
-                    <h2>Vamos construir<br><span class="accent">algo juntos?</span></h2>
-                    <p>Estou aberto a conversas sobre oportunidades, projetos colaborativos, estágios ou simplesmente trocar ideia sobre IA e tecnologia.</p>
-                    <div class="contato-links">
-                        <a href="https://wa.me/553496583020" target="_blank" rel="noopener noreferrer" class="contato-link" aria-label="WhatsApp">💬 WhatsApp</a>
-                        <a href="https://github.com/wjr007" target="_blank" class="contato-link">
-                            <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                            github.com/wjr007
-                        </a>
-                        <a href="https://www.linkedin.com/in/walteir-luiz-de-morais-junior-42a21928a/" target="_blank" class="contato-link">
-                            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                            LinkedIn
-                        </a>
-                    </div>
-                </div>
-                <div class="contato-cta">
-                    <div class="cta-box">
-                        <p class="mono cta-status"><span class="badge-dot"></span> Disponível agora</p>
-                        <h3>Mande uma mensagem</h3>
-                        <p>Responderei o mais rápido possível!</p>
-                        <a href="mailto:walteir@email.com" class="btn-primary full-width">Enviar Email</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-inner">
-                <span class="nav-logo">WJ<span class="accent">.</span></span>
-                <p class="mono footer-copy">Construído por Walteir Jr. 💻 Direitos Reservados — 2025</p>
-                <div class="footer-links">
-                    <a href="https://wa.me/553496583020" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-                    <a href="https://github.com/wjr007" target="_blank">GitHub</a>
-                    <a href="https://www.linkedin.com/in/walteir-luiz-de-morais-junior-42a21928a/" target="_blank">LinkedIn</a>
-                </div>
+        <div class="container footer-container">
+            <div class="footer-left">
+                <span class="nav-brand">
+                    <span class="brand-bracket">[</span><span class="brand-name">WJ</span><span class="brand-dot">.</span><span class="brand-bracket">]</span>
+                </span>
+                <p class="mono footer-copy">
+                    Walteir Luiz de Morais Junior © 2026 · IA & Ciência de Dados (Uniube)
+                </p>
+            </div>
+            <div class="footer-right mono">
+                <a href="#hero">VOLTAR AO TOPO ↑</a>
             </div>
         </div>
     </footer>
