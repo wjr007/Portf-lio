@@ -175,4 +175,44 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { passive: true });
     }
 
+    // --- 8. 3D TILT PARALLAX & SPECULAR GLARE (CodeMyUI + UIverse) ---
+    const photoWrapper = document.querySelector('.photo-wrapper');
+    const hudFrame = document.querySelector('.hud-frame');
+
+    if (photoWrapper && hudFrame && window.innerWidth > 768) {
+        hudFrame.addEventListener('mousemove', (e) => {
+            const rect = photoWrapper.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width - 0.5;
+            const y = (e.clientY - rect.top) / rect.height - 0.5;
+            
+            // 3D rotation limits (-14deg to +14deg)
+            const rotY = Math.max(-14, Math.min(14, x * 22));
+            const rotX = Math.max(-14, Math.min(14, -y * 22));
+
+            photoWrapper.style.transform = `perspective(900px) rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg) scale3d(1.025, 1.025, 1.025)`;
+            
+            // Dynamic glare position
+            const glareX = ((e.clientX - rect.left) / rect.width) * 100;
+            const glareY = ((e.clientY - rect.top) / rect.height) * 100;
+            photoWrapper.style.setProperty('--photo-glare-x', `${glareX.toFixed(1)}%`);
+            photoWrapper.style.setProperty('--photo-glare-y', `${glareY.toFixed(1)}%`);
+        });
+
+        hudFrame.addEventListener('mouseleave', () => {
+            photoWrapper.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        });
+    }
+
+    // --- 9. SPOTLIGHT CURSOR TRACKING (UIverse.io) ---
+    const spotlightCards = document.querySelectorAll('.project-hud-card, .cyber-card, .disc-card, .cert-card-hud');
+    spotlightCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+        });
+    });
+
 });

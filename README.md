@@ -1,6 +1,6 @@
 # 🚀 Walteir Junior — Portfólio de IA & Ciência de Dados
 
-![Banner do Portfólio](./portfolio-banner.jpg)
+![Banner do Portfólio](./portfolio-banner.png)
 
 <div align="center">
 
