@@ -9,7 +9,7 @@
 - `portfolio-banner.jpg`: Banner de alta resolução para o README destacando IA, Deep Learning e Engenharia de Dados.
 - `foto.png`: Foto de perfil de Walteir Junior.
 - `uniube-logo.png`: Logotipo da Universidade de Uberaba utilizado na seção acadêmica.
-- `certificado-*.png`: Imagens de comprovação das certificações (Databricks, Power BI, Agentes IA, Expert Ads e Photoshop).
+- `certificado-*.png`: Imagens de comprovação das certificações (Databricks, Uberlândia Summit 2026, DevFest Triângulo 2026 / GDG, Power BI, Agentes IA, Expert Ads e Photoshop).
 
 ---
 
@@ -45,6 +45,13 @@ Os projetos apresentados correspondem aos repositórios públicos da conta `wjr0
 6. **Análise Preditiva de Admissão com IA**: `Analise-Admissao-Candidatos-IA`
 7. **Análise de Portfólio Varejista B3**: `An-lise-de-Dados-`
 8. **Dashboard Analítico**: `Dashboard`
+
+---
+
+## Deploy & Produção
+
+- **URL no Netlify:** [https://portfoliowjr.netlify.app](https://portfoliowjr.netlify.app)
+- **Repositório GitHub:** [https://github.com/wjr007/Portf-lio](https://github.com/wjr007/Portf-lio)
 
 ---
 

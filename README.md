@@ -4,6 +4,7 @@
 
 <div align="center">
 
+[![Website](https://img.shields.io/badge/Portfolio%20Online-portfoliowjr.netlify.app-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://portfoliowjr.netlify.app)
 [![GitHub](https://img.shields.io/badge/GitHub-wjr007-00F0FF?style=for-the-badge&logo=github&logoColor=white)](https://github.com/wjr007)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Walteir%20Junior-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/walteir-luiz-de-morais-junior-42a21928a/)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-Contato%20Direto-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/553496583020)
